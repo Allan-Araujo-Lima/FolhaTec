@@ -1,20 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block content %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
 
-{% block content %}
 <div>
     <div>
         <div class="header">
             <img class="img" src="{% static 'img/Logomarca.png' %}">
             <button class="btn">Sobre nós</button>
-            <button class="btn">Calculadoras</button>
+            <button class="btn" onclick="redirectToCalculators()">Calculadoras</button>
             <button class="btn">Contatos</button>
             <button class="btn">Clientes</button>
         </div>
     </div>
+    {% block js %}
+    <script type="text/javascript" defer src="{% static 'js/home.js' %}"></script>
+    {% endblock %}
 </div>
 {% endblock %}

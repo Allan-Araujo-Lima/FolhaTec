@@ -4,4 +4,5 @@ from django.http import HttpResponse
 def inicial(request):
     return render(request, 'folha/home.html')
 
-# Create your views here.
+def calculadoras(request):
+    return render(request, 'folha/calculadoras.html')
