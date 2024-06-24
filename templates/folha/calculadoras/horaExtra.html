@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/calculadoras/hora-extra.css' %}">
+{% endblock %}
+
+<div>
+    <form class="container-hora-extra">
+        <div class="form-item">
+            <label>salário base</label>
+            <input placeholder="Digite seu salário atual">
+        </div>
+        <div class="form-item">
+            <label>Adicionais</label>
+            <select>
+                <option value="Nenhum">Nenhum</option>
+                <option value="Insalubridade">Insalubridade</option>
+                <option value="Periculosidade">Periculosidade</option>
+            </select>
+        </div>
+    </form>
+    {% block js %}
+    <script type="text/javascript" defer src="{% static 'js/calculadoras/hora-extra.js' %}"></script>
+    {% endblock %}
+</div>
+{% endblock %}

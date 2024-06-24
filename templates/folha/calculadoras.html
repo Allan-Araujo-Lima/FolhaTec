@@ -1,20 +1,28 @@
 {% extends 'base.html' %}
-{& load static %}
+{% load static %}
+
 {% block content %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/calculadoras.css' %}">
+{% endblock %}
 
-<div class="div-calculadora">
-    <button>
-        Folha de Pagamento
-    </button>
-    <button>
-        Férias
-    </button>
-    <button>
-        Rescisão
-    </button>
-    <button>
-        Hora Exta
-    </button>
+<div>
+    <div class="div-calculadora">
+        <button>
+            Folha de Pagamento
+        </button>
+        <button>
+            Férias
+        </button>
+        <button>
+            Rescisão
+        </button>
+        <button onclick="redirectToHoraExtra()">
+            Hora Exta
+        </button>
+    </div>
+    {% block js %}
+    <script type="text/javascript" defer src="{% static 'js/calculadoras.js' %}"></script>
+    {% endblock %}
 </div>
-
 {% endblock %}

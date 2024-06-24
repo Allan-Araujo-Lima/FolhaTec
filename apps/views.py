@@ -6,3 +6,6 @@ def inicial(request):
 
 def calculadoras(request):
     return render(request, 'folha/calculadoras.html')
+
+def horaExtra(request):
+    return render(request, 'folha/calculadoras/horaExtra.html')
