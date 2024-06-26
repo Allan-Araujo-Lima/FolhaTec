@@ -7,18 +7,21 @@
 {% endblock %}
 
 <div>
-    <form class="container-hora-extra">
+    <form class="container-hora-extra" id="container-hora-extra">
         <div class="form-item">
-            <label>salário base</label>
-            <input placeholder="Digite seu salário atual">
+            <label for="salario">Salário base</label>
+            <input type="number" placeholder="Digite seu salário atual" id="salario" name="salario">
         </div>
         <div class="form-item">
-            <label>Adicionais</label>
-            <select>
+            <label for="adicionais">Adicionais</label>
+            <select id="adicionais" name="adicionais">
                 <option value="Nenhum">Nenhum</option>
                 <option value="Insalubridade">Insalubridade</option>
                 <option value="Periculosidade">Periculosidade</option>
             </select>
+        </div>
+        <div class="calculate">
+            <button class="calculate-btn" id="calculate-btn" type="submit">Calcular</button>
         </div>
     </form>
     {% block js %}
